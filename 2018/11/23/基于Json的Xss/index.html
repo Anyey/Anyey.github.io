@@ -87,15 +87,15 @@
 <meta property="og:site_name" content="Anyey&#39;s blog">
 <meta property="og:description" content="为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.  如下,即使输出payload,然并卵.   在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/11/img/18_11_23/json_xss_1.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/23/基于Json的Xss/json_xss_1.png">
 <meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_2.png">
 <meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_3.png">
 <meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_4.png">
-<meta property="og:updated_time" content="2018-11-23T15:42:44.231Z">
+<meta property="og:updated_time" content="2018-11-23T15:58:36.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Json的Xss">
 <meta name="twitter:description" content="为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.  如下,即使输出payload,然并卵.   在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/img/18_11_23/json_xss_1.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/23/基于Json的Xss/json_xss_1.png">
 
 
 
@@ -305,7 +305,7 @@
       
 
       
-        <p>  为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.<br>  如下,即使输出payload,然并卵.<br><img src="/2018/11/23/基于Json的Xss/../../img/18_11_23/json_xss_1.png" alt="xss"></p>
+        <p>  为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.<br>  如下,即使输出payload,然并卵.<br><img src="/2018/11/23/基于Json的Xss/json_xss_1.png" alt="xss"></p>
 <p>  在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所请求文件要考虑的特定内容类型（HKCR\MIME\Database\Content Type\CLSID）.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_2.png" alt="xss"></p>
 <p>  但是在IE8+中,Internet Explorer的默认mime类型列表不包含任何JSON数据mime类型,这时在末尾添加扩展名html或者htm,强制IE识别JSON,显示为html,而这种攻击方法也被称为内容嗅探,如下,弹框了呢.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_3.png" alt="xss"><br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/imgs/json_xss_4.png" alt="xss"></p>
 
