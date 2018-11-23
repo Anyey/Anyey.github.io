@@ -233,6 +233,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/23/基于Json的Xss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anyey">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anyey's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/23/基于Json的Xss/" itemprop="url">基于Json的Xss</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-23T23:01:52+08:00">
+                2018-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.<br>  如下,即使输出payload,然并卵.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_1.png" alt="xss"></p>
+<p>  在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所请求文件要考虑的特定内容类型（HKCR\MIME\Database\Content Type\CLSID）.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_2.png" alt="xss"></p>
+<p>  但是在IE8+中,Internet Explorer的默认mime类型列表不包含任何JSON数据mime类型,这时在末尾添加扩展名html或者htm,强制IE识别JSON,显示为html,而这种攻击方法也被称为内容嗅探,如下,弹框了呢.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_3.png" alt="xss"><br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_4.png" alt="xss"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/13/awvs-11-批量扫描/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -388,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -396,6 +518,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>

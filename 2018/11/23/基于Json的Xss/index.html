@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="漏洞挖掘," />
 
 
 
@@ -79,17 +79,23 @@
 
 
 
-<meta name="description" content="专注于网络安全攻防研究">
-<meta name="keywords" content="网络安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Anyey&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta name="description" content="为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.  如下,即使输出payload,然并卵.   在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所">
+<meta name="keywords" content="漏洞挖掘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Json的Xss">
+<meta property="og:url" content="http://yoursite.com/2018/11/23/基于Json的Xss/index.html">
 <meta property="og:site_name" content="Anyey&#39;s blog">
-<meta property="og:description" content="专注于网络安全攻防研究">
+<meta property="og:description" content="为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.  如下,即使输出payload,然并卵.   在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_1.png">
+<meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_2.png">
+<meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_3.png">
+<meta property="og:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_4.png">
+<meta property="og:updated_time" content="2018-11-23T15:22:28.065Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anyey&#39;s blog">
-<meta name="twitter:description" content="专注于网络安全攻防研究">
+<meta name="twitter:title" content="基于Json的Xss">
+<meta name="twitter:description" content="为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.  如下,即使输出payload,然并卵.   在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所">
+<meta name="twitter:image" content="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_1.png">
 
 
 
@@ -119,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/23/基于Json的Xss/"/>
 
 
 
 
 
-  <title>归档 | Anyey's blog</title>
+  <title>基于Json的Xss | Anyey's blog</title>
   
 
 
@@ -144,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,111 +224,149 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 2 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/23/基于Json的Xss/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anyey">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anyey's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/11/23/基于Json的Xss/" itemprop="url">
-              
-                <span itemprop="name">基于Json的Xss</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">基于Json的Xss</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-23T23:01:52+08:00"
-              content="2018-11-23" >
-          11-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-23T23:01:52+08:00">
+                2018-11-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/13/awvs-11-批量扫描/" itemprop="url">
-              
-                <span itemprop="name">awvs 11 批量扫描</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-13T20:57:59+08:00"
-              content="2018-08-13" >
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>  为了防止浏览器错误地呈现JSON代码,Web服务器为这些页面提供了一个特殊的Content-Type设置为 application/json或application/x-javascript,这表示响应将不能呈现为html,即便没有过滤,同样也无法进行XSS攻击.<br>  如下,即使输出payload,然并卵.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_1.png" alt="xss"></p>
+<p>  在IE中,直接访问会提示下载,因为当IE尝试在Windows注册表中搜索时,找不到所请求文件要考虑的特定内容类型（HKCR\MIME\Database\Content Type\CLSID）.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_2.png" alt="xss"></p>
+<p>  但是在IE8+中,Internet Explorer的默认mime类型列表不包含任何JSON数据mime类型,这时在末尾添加扩展名html或者htm,强制IE识别JSON,显示为html,而这种攻击方法也被称为内容嗅探,如下,弹框了呢.<br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_3.png" alt="xss"><br><img src="https://github.com/Anyey/Anyey.github.io/blob/master/images/json_xss_4.png" alt="xss"></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/漏洞挖掘/" rel="tag"># 漏洞挖掘</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/13/awvs-11-批量扫描/" rel="next" title="awvs 11 批量扫描">
+                <i class="fa fa-chevron-left"></i> awvs 11 批量扫描
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +374,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -523,6 +571,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
